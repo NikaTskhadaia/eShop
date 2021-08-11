@@ -1,0 +1,80 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "EshopContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "eShop.DataBaseRepository",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[Order].[OrderDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Order].[Orders]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Order].[OrderStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Product].[Categories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Product].[ProductImages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Product].[Products]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Product].[ProductsInCatgories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Product].[Units]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[User].[Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[User].[UserAddress]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[User].[Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[User].[UsersInRoles]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DESKTOP-6FNB4GI\\SQLEXPRESS01.eShop",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

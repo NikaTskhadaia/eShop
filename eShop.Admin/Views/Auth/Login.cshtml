@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_LayoutAuth";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-5">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-header"><h3 class="text-center font-weight-light my-4">ავტორიზაცია</h3></div>
+            <div class="card-body">
+                <form action="/auth/login" method="post">
+
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="Email" id="inputEmail" type="email" placeholder="name@example.com" />
+                        <label for="inputEmail">ელ. ფოსტა</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="PasswordHash" id="inputPassword" type="password" placeholder="Password" />
+                        <label for="inputPassword">პაროლი</label>
+                    </div>
+                    
+                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                        <input type="submit" name="name" value="შესვლა" />
+                    </div>
+
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>

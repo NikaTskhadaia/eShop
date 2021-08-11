@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eShop.DataTransferObject\eShop.DataTransferObject.csproj" />
+    <ProjectReference Include="..\eShop.DomainModel\eShop.DomainModel.csproj" />
+    <ProjectReference Include="..\eShop.DomainService\eShop.DomainService.csproj" />
+    <ProjectReference Include="..\eShop.Utility\eShop.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
