@@ -1,0 +1,12 @@
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.csproj.AssemblyReference.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.AssemblyInfoInputs.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.AssemblyInfo.cs
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\bin\Debug\net5.0\eShop.DomainModel.deps.json
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\bin\Debug\net5.0\eShop.DomainModel.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\bin\Debug\net5.0\ref\eShop.DomainModel.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\bin\Debug\net5.0\eShop.DomainModel.pdb
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\ref\eShop.DomainModel.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DomainModel\obj\Debug\net5.0\eShop.DomainModel.pdb

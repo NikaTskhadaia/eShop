@@ -1,0 +1,12 @@
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\bin\Debug\net5.0\eShop.DataTransferObject.deps.json
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\bin\Debug\net5.0\eShop.DataTransferObject.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\bin\Debug\net5.0\ref\eShop.DataTransferObject.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\bin\Debug\net5.0\eShop.DataTransferObject.pdb
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.csproj.AssemblyReference.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.AssemblyInfoInputs.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.AssemblyInfo.cs
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\ref\eShop.DataTransferObject.dll
+C:\Users\Nika\Desktop\asp-net-mvc\eShop\eShop.DataTransferObject\obj\Debug\net5.0\eShop.DataTransferObject.pdb

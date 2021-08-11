@@ -1,0 +1,344 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataBaseRepository\\eShop.DataBaseRepository.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataBaseRepository\\eShop.DataBaseRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataBaseRepository\\eShop.DataBaseRepository.csproj",
+        "projectName": "eShop.DataBaseRepository",
+        "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataBaseRepository\\eShop.DataBaseRepository.csproj",
+        "packagesPath": "C:\\Users\\Nika\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataBaseRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\eShop.DomainService.csproj": {
+                "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\eShop.DomainService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\eShop.DataTransferObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\eShop.DataTransferObject.csproj",
+        "projectName": "eShop.DataTransferObject",
+        "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\eShop.DataTransferObject.csproj",
+        "packagesPath": "C:\\Users\\Nika\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj",
+        "projectName": "eShop.DomainModel",
+        "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj",
+        "packagesPath": "C:\\Users\\Nika\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\eShop.DomainService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\eShop.DomainService.csproj",
+        "projectName": "eShop.DomainService",
+        "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\eShop.DomainService.csproj",
+        "packagesPath": "C:\\Users\\Nika\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj": {
+                "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj"
+              },
+              "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\eShop.Utility.csproj": {
+                "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\eShop.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\eShop.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\eShop.Utility.csproj",
+        "projectName": "eShop.Utility",
+        "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\eShop.Utility.csproj",
+        "packagesPath": "C:\\Users\\Nika\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\eShop.DataTransferObject.csproj": {
+                "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DataTransferObject\\eShop.DataTransferObject.csproj"
+              },
+              "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj": {
+                "projectPath": "C:\\Users\\Nika\\Desktop\\asp-net-mvc\\eShop\\eShop.DomainModel\\eShop.DomainModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
