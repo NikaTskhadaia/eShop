@@ -1,11 +1,25 @@
-PersonDirectory.Domain/bin/
-PersonDirectory.Domain/obj/
+eShop.Admin/bin/
+eShop.Admin/obj/
 
-PersonDirectory.Persistence/bin/
-PersonDirectory.Persistence/obj/
+eShop.ApplicationService/bin/
+eShop.ApplicationService/obj/
 
-PersonDirectoryWebAPI/bin/
-PersonDirectoryWebAPI/obj/
+eShop.DataBaseRepository/bin/
+eShop.DataBaseRepository/obj/
 
-PersonDirectoryWebAPI/.vs/
-PersonDirectoryWebAPI/.vs/eShop
+eShop.DataTransferObject/bin/
+eShop.DataTransferObject/obj/
+
+eShop.DomainModel/bin/
+eShop.DomainModel/obj/
+
+eShop.DomainService/bin/
+eShop.DomainService/obj/
+
+eShop.Utility/bin/
+eShop.Utility/obj/
+
+eShop.Web/bin/
+eShop.Web/obj/
+
+eShop/.vs/
