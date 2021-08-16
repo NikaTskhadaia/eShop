@@ -9,12 +9,18 @@ namespace eShop.Utility
 {
     public static class AutomapperExtensions
     {
-
         public static TDestination MapObject<TSource, TDestination>(TSource value)
         {
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<TSource, TDestination>(); });
             IMapper mapper = config.CreateMapper();
             return mapper.Map<TSource, TDestination>(value);
+        }
+
+        public static List<TDestination> MapList<TSource, TDestination>(List<TSource> source)
+        {
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<TSource, TDestination>(); });
+            IMapper mapper = config.CreateMapper();
+            return mapper.Map<List<TDestination>>(source);
         }
     }
 }

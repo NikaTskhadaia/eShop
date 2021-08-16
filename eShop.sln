@@ -11,23 +11,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{73B9CFD6-6676-4199-A5B4-FFF8D4F243FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.ApplicationService", "eShop.ApplicationService\eShop.ApplicationService.csproj", "{73A4958B-82D0-4211-8240-F7019CFBD5B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.ApplicationService", "eShop.ApplicationService\eShop.ApplicationService.csproj", "{73A4958B-82D0-4211-8240-F7019CFBD5B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.DataTransferObject", "eShop.DataTransferObject\eShop.DataTransferObject.csproj", "{9C044B55-62DF-4034-ADCC-E34228F1BEBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.DataTransferObject", "eShop.DataTransferObject\eShop.DataTransferObject.csproj", "{9C044B55-62DF-4034-ADCC-E34228F1BEBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.DomainModel", "eShop.DomainModel\eShop.DomainModel.csproj", "{C0418286-4828-4DBE-B525-7CBEF03BAE58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.DomainModel", "eShop.DomainModel\eShop.DomainModel.csproj", "{C0418286-4828-4DBE-B525-7CBEF03BAE58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.DomainService", "eShop.DomainService\eShop.DomainService.csproj", "{E9F1B847-DFB0-4709-8A62-3D661529620B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.DomainService", "eShop.DomainService\eShop.DomainService.csproj", "{E9F1B847-DFB0-4709-8A62-3D661529620B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Utility", "eShop.Utility\eShop.Utility.csproj", "{DA63B1A5-45E6-4998-9EC0-F050F6BF1498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Utility", "eShop.Utility\eShop.Utility.csproj", "{DA63B1A5-45E6-4998-9EC0-F050F6BF1498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Web", "eShop.Web\eShop.Web.csproj", "{0DD02135-AF4E-426B-B15E-372EBC8D9130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Web", "eShop.Web\eShop.Web.csproj", "{0DD02135-AF4E-426B-B15E-372EBC8D9130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Admin", "eShop.Admin\eShop.Admin.csproj", "{33934134-DC35-4DE9-84D6-3DD1AB3008BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Admin", "eShop.Admin\eShop.Admin.csproj", "{33934134-DC35-4DE9-84D6-3DD1AB3008BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{3183A0D0-4C83-4DBB-8BE6-B8C9B554CA89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.DataBaseRepository", "eShop.DataBaseRepository\eShop.DataBaseRepository.csproj", "{E39322C0-8DFA-43D6-89F1-7D8D3B8CF820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.DataBaseRepository", "eShop.DataBaseRepository\eShop.DataBaseRepository.csproj", "{E39322C0-8DFA-43D6-89F1-7D8D3B8CF820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

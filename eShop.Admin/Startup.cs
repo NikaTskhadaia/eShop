@@ -1,6 +1,7 @@
 using eShop.ApplicationService.ServiceInterfaces;
 using eShop.ApplicationService.Services;
 using eShop.DataBaseRepository;
+using eShop.DomainService.RepositoriInterfaces;
 using eShop.DomainService.RepositoryInterfaces;
 using eShop.DomainService.ServiceInterfaces;
 using eShop.DomainService.Services;
@@ -34,6 +35,15 @@ namespace eShop.Admin
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserDomainService, UserDomainService>();
             services.AddScoped<IUserApplicationService, UserApplicationService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductDomainService, ProductDomainService>();
+            services.AddScoped<IProductApplicationService, ProductApplicationService>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryDomainService, CategoryDomainService>();
+            services.AddScoped<ICategoryApplicationService, CategoryApplicationService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderDomainService, OrderDomainService>();
+            services.AddScoped<IOrderApplicationService, OrderApplicationService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddSession(options =>

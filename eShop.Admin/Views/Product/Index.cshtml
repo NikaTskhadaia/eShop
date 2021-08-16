@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+@model IEnumerable<ProductDTO>
+
+
+<link href="/css/productPage.css" rel="stylesheet" />
+
+<div>
+    <h1>პროდუქტები</h1>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal">
+        <span class="iconify" data-icon="bi:bookmark-plus"></span>
+        დამატება
+    </button>
+    <br />
+    <br />
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>სახელი</th>
+                <th>აღწერა</th>
+                <th>ფასი</th>
+                <th>ერთეული</th>
+                <th>რაოდენობა</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img class="product-image" src="@item.ImagePath" alt="No Photo" />
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.Price</td>
+                        <td>@item.Unit</td>
+                        <td>@item.Quantity</td>
+                        <td>
+                            <button id="editBtn" class="btn btn-success btn-sm rounded-0" type="button" data-placement="top" data-toggle="modal" data-target="#productModal" title="რედაქტირება" data-id="@item.ID" onclick="getproduct('@item.ID')"><span class="iconify" data-icon="bi:pencil"></span></button>
+                            <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-placement="top" title="წაშლა" data-id="@item.ID" data-target="#deleteProductModal"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">პროდუქტის რედაქტირება</h5>
+            </div>
+            <div class="modal-body">
+
+                <form enctype="multipart/form-data" asp-controller="Product" asp-action="SaveProduct" method="post">
+                    <div class="mb-3" hidden>
+                        <label for="ID" class="col-form-label">ID</label>
+                        <input type="text" class="form-control" id="ID" name="ID">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Name" class="col-form-label">სახელი</label>
+                        <input type="text" class="form-control" id="Name" name="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Description" class="col-form-label">აღწერა</label>
+                        <textarea class="form-control" id="Description" name="Description"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Price" class="col-form-label">ფასი</label>
+                        <input type="text" class="form-control" id="Price" name="Price">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Unit" class="col-form-label">ერთეული</label>
+                        <input type="text" class="form-control" id="Unit" name="Unit">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Quantity" class="col-form-label">რაოდენობა</label>
+                        <input type="text" class="form-control" id="Quantity" name="Quantity">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="col-md-10">
+                            <label id="productID"></label>
+                            <p>სურათის ატვირთვა/შეცვლა:</p>
+                            <input type="file" name="Image" />
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">გაუქმება</button>
+                        <input type="submit" class="btn btn-primary" value="შენახვა">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">პროდუქტის წაშლა</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Product" asp-action="DeleteProduct" method="get">
+                    <label>გსურთ პროდუქტის წაშლა?</label>
+                    <input type="text" class="value" name="productId" value="" hidden />
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-danger" value="წაშლა">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">დახურვა</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/Products.js"></script>
