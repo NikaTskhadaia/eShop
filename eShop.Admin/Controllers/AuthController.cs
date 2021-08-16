@@ -50,9 +50,9 @@ namespace eShop.Admin.Controllers
         public IActionResult Logout()
         {
             Guid sessionId = Guid.Parse(HttpContext.Session.GetString("SessionID"));
-
             _userApplicationService.Logout(sessionId);
-
+            HttpContext.Session.Remove("SessionID");
+            HttpContext.Session.Remove("UserName");
             return Redirect("/");
         }
     }

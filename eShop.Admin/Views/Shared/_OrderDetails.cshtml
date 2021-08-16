@@ -1,0 +1,40 @@
+﻿@model IEnumerable<OrderDetailsDTO>
+
+
+
+<div class="***REMOVED***">
+
+    <div class="row">
+        <div class="mb-3 col-4">
+            <label for="Name" class="col-form-label">სახელი</label>
+        </div>
+
+        <div class="mb-3 col-4">
+            <label for="price" class="col-form-label">ფასი</label>
+        </div>
+
+        <div class="mb-3 col-4">
+            <label for="quantity" class="col-form-label">რაოდენობა</label>
+        </div>
+    </div>
+    @{
+        foreach (var item in Model)
+        {
+
+            <div class="row">
+                <div class="mb-3 col-4">
+                    <input type="text" class="form-control" id="Name" readonly value="@item.ProductName">
+                </div>
+
+                <div class="mb-3 col-4">
+                    <input type="text" class="form-control" id="price" readonly value="@item.Price">
+                </div>
+
+                <div class="mb-3 col-4">
+                    <input type="text" class="form-control" id="quantity" readonly value="@item.Quantity">
+                </div>
+            </div>
+        }
+    }
+
+</div>
