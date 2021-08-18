@@ -15,6 +15,9 @@ namespace eShop.DataBaseRepository.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime? DateChanged { get; set; }
+        public DateTime? DateDeleted { get; set; }
 
         public virtual ICollection<ProductsInCatgory> ProductsInCatgories { get; set; }
     }

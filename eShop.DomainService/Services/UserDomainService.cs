@@ -1,4 +1,5 @@
-﻿using eShop.DomainModel.Aggreagates;
+﻿using eShop.DataTransferObject;
+using eShop.DomainModel.Aggreagates;
 using eShop.DomainService.RepositoryInterfaces;
 using eShop.DomainService.ServiceInterfaces;
 using eShop.Utility;
@@ -49,6 +50,26 @@ namespace eShop.DomainService.Services
         public void Logout(Guid sessionId)
         {
             _userRepository.Logout(sessionId);
+        }
+
+        public IEnumerable<UserDTO> GetAll()
+        {
+            return _userRepository.GetAll();
+        }
+
+        public UserDTO Get(Guid id)
+        {
+            return _userRepository.Get(id);
+        }
+
+        public void Delete(Guid id)
+        {
+            _userRepository.Delete(id);
+        }
+
+        public void SaveUser(UserDTO userDto)
+        {
+            _userRepository.SaveUser(userDto);
         }
     }
 }

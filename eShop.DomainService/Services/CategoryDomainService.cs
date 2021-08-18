@@ -17,9 +17,25 @@ namespace eShop.DomainService.Services
         {
             _categroyRepository = categroyRepository;
         }
+
+        public void Delete(int id)
+        {
+            _categroyRepository.Delete(id);
+        }
+
+        public CategoryDTO Get(int id)
+        {
+            return _categroyRepository.Get(id);
+        }
+
         public IEnumerable<CategoryDTO> GetAll()
         {
             return _categroyRepository.GetAll();
+        }
+
+        public void SaveCategory(CategoryDTO category)
+        {
+            _categroyRepository.SaveCategory(category);
         }
     }
 }

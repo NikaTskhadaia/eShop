@@ -22,6 +22,7 @@
                 <th>სახელი</th>
                 <th>აღწერა</th>
                 <th>ფასი</th>
+                <th>კატეგორია</th>
                 <th>ერთეული</th>
                 <th>რაოდენობა</th>
                 <th></th>
@@ -38,6 +39,12 @@
                         <td>@item.Name</td>
                         <td>@item.Description</td>
                         <td>@item.Price</td>
+                        <td>
+                            @foreach (var category in item.Categories)
+                            {
+                                <label>@category</label>
+                            }
+                        </td>
                         <td>@item.Unit</td>
                         <td>@item.Quantity</td>
                         <td>
@@ -96,6 +103,32 @@
                             <label id="productID"></label>
                             <p>სურათის ატვირთვა/შეცვლა:</p>
                             <input type="file" name="Image" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                კატეგორია
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="monitor" name="Categories" value="მონიტორი">
+                                    <label for="monitor" class="col-form-label">მონიტორი</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="speaker" name="Categories" value="დინამიკი">
+                                    <label for="speaker" class="col-form-label">დინამიკი</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="laptop" name="Categories" value="ლეპტოპი">
+                                    <label for="laptop" class="col-form-label">ლეპტოპი</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <input type="checkbox" id="cell-phone" name="Categories" value="მობილური">
+                                    <label for="cell-phone" class="col-form-label">მობილური</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

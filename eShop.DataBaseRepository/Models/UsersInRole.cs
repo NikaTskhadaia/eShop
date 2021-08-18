@@ -10,7 +10,7 @@ namespace eShop.DataBaseRepository.Models
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public Guid RoleId { get; set; }
+        public int RoleId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime? DateChenged { get; set; }
         public DateTime? DateDeleted { get; set; }

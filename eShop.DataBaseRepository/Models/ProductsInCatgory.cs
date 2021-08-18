@@ -8,7 +8,6 @@ namespace eShop.DataBaseRepository.Models
 {
     public partial class ProductsInCatgory
     {
-        public Guid Id { get; set; }
         public int CategoryId { get; set; }
         public Guid ProductId { get; set; }
 

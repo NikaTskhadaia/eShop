@@ -45,24 +45,9 @@ namespace eShop.DataBaseRepository
         {
             using (eShopDBContext context = new())
             {
-                var product = (from p in context.Products
-                                where p.Id == productDTO.ID
-                                select p).FirstOrDefault();
-
                 var unitID = context.Units.Where(u => u.Name == productDTO.Unit).Select(u => u.Id).FirstOrDefault();
 
-                if (product is not null)
-                {
-                    product.Name = productDTO.Name;
-                    product.Description = productDTO.Description;
-                    product.Price = productDTO.Price;
-                    product.Quantity = productDTO.Quantity;
-                    product.UnitId = unitID;
-                    product.DateChanged = DateTime.Now;
-
-                    context.SaveChanges();
-                }
-                else
+                if (productDTO.ID == Guid.Empty)
                 {
                     Product p = new()
                     {
@@ -78,6 +63,39 @@ namespace eShop.DataBaseRepository
 
                     productDTO.ID = p.Id;
                 }
+                
+                else
+                {
+                    var product = (from p in context.Products
+                                   where p.Id == productDTO.ID
+                                   select p).FirstOrDefault();
+
+
+                    if (product is not null)
+                    {
+                        product.Name = productDTO.Name;
+                        product.Description = productDTO.Description;
+                        product.Price = productDTO.Price;
+                        product.Quantity = productDTO.Quantity;
+                        product.UnitId = unitID;
+                        product.DateChanged = DateTime.Now;
+
+                        context.SaveChanges();
+                    }
+                }
+
+                foreach (var item in productDTO.Categories)
+                {
+                    var category = context.Categories.FirstOrDefault(c => c.Name == item);
+
+                    ProductsInCatgory productsInCatgory = new()
+                    {
+                        ProductId = productDTO.ID,
+                        CategoryId = category.Id
+                    };
+                    context.ProductsInCatgories.Add(productsInCatgory);
+                }
+                context.SaveChanges();
             }
 
 
@@ -111,7 +129,7 @@ namespace eShop.DataBaseRepository
         {
             using (eShopDBContext context = new())
             {
-                var query = (from p in context.Products
+                var products = (from p in context.Products
                              where p.DateDeleted == null
                              join unit in context.Units on p.UnitId equals unit.Id
                              join image in  context.ProductImages on p.Id equals image.ProductId into productWithImage
@@ -126,7 +144,17 @@ namespace eShop.DataBaseRepository
                                  Quantity = p.Quantity
                              }).Distinct().ToList();
 
-                return query;
+                foreach (var item in products)
+                {
+                    var categories = (from pc in context.ProductsInCatgories
+                                     where pc.ProductId == item.ID
+                                     join c in context.Categories on pc.CategoryId equals c.Id
+                                     select c.Name).ToList();
+                    item.Categories = categories;
+
+                }
+
+                return products;
             }
         }
 

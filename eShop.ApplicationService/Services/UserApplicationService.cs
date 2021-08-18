@@ -21,6 +21,21 @@ namespace eShop.ApplicationService.Services
             _userDomainService = userDomainService;
         }
 
+        public void Delete(Guid id)
+        {
+            _userDomainService.Delete(id);
+        }
+
+        public UserDTO Get(Guid id)
+        {
+            return _userDomainService.Get(id);
+        }
+
+        public IEnumerable<UserDTO> GetAll()
+        {
+            return _userDomainService.GetAll();
+        }
+
         public UserAuthResponseDTO Login(LoginDTO user)
         {
             UserEntity userModel = new();
@@ -37,6 +52,11 @@ namespace eShop.ApplicationService.Services
         public void Logout(Guid sessionId)
         {
             _userDomainService.Logout(sessionId);
+        }
+
+        public void SaveUser(UserDTO userDto)
+        {
+            _userDomainService.SaveUser(userDto);
         }
     }
 }
