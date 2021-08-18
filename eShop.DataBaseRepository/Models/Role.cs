@@ -13,7 +13,7 @@ namespace eShop.DataBaseRepository.Models
             UsersInRoles = new HashSet<UsersInRole>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<UsersInRole> UsersInRoles { get; set; }

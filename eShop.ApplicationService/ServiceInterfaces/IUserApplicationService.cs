@@ -11,5 +11,9 @@ namespace eShop.ApplicationService.ServiceInterfaces
     {
         UserAuthResponseDTO Login(LoginDTO user);
         void Logout(Guid sessionId);
+        IEnumerable<UserDTO> GetAll();
+        UserDTO Get(Guid id);
+        void Delete(Guid id);
+        void SaveUser(UserDTO userDto);
     }
 }

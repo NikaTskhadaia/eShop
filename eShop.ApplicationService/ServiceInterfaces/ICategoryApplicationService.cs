@@ -10,5 +10,8 @@ namespace eShop.ApplicationService.ServiceInterfaces
     public interface ICategoryApplicationService
     {
         IEnumerable<CategoryDTO> GetAll();
+        CategoryDTO Get(int id);
+        void SaveCategory(CategoryDTO category);
+        void Delete(int id);
     }
 }

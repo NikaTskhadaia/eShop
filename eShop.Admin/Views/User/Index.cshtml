@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+
+@model IEnumerable<UserDTO>
+
+
+<div>
+    <h1>მომხმარებლები</h1>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">
+        <span class="iconify" data-icon="bi:bookmark-plus"></span>
+        დამატება
+    </button>
+
+    <br />
+    <br />
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>ელ-ფოსტა</th>
+                <th>სახელი</th>
+                <th>გვარი</th>
+                <th>შექმნის თარიღი</th>
+                <th>ცვლილების თარიღი</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                        <tr>
+                            <td>@item.Email</td>
+                            <td>@item.FirstName</td>
+                            <td>@item.LastName</td>
+                            <td>@item.DateCreated</td>
+                            <td>@item.DateChanged</td>
+                            <td>
+                                <button id="editBtn" class="btn btn-success btn-sm rounded-0" type="button" data-placement="top" data-toggle="modal" data-target="#userModal" title="რედაქტირება" data-id="@item.Id"><i class="fa fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-placement="top" data-target="#deleteUserModal" title="წაშლა" data-id="@item.Id"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">კატეგორიის რედაქტირება</h5>
+            </div>
+            <div class="modal-body">
+
+                <form enctype="multipart/form-data" asp-controller="User" asp-action="SaveUser" method="post">
+                    <div class="mb-3" hidden>
+                        <label for="Id" class="col-form-label">ID</label>
+                        <input type="text" class="form-control" id="Id" name="Id">
+                    </div>
+
+                    <div class="mb-3" hidden>
+                        <label for="SessionId" class="col-form-label">SessionId</label>
+                        <input type="text" class="form-control" id="SessionId" name="SessionId">
+                    </div>
+
+                    <div class="mb-3" hidden>
+                        <label for="ActivateCode" class="col-form-label">ActivateCode</label>
+                        <input type="text" class="form-control" id="ActivateCode" name="ActivateCode">
+                    </div>
+
+                    <div class="mb-3" hidden>
+                        <label for="IsActive" class="col-form-label">IsActive</label>
+                        <input type="text" class="form-control" id="IsActive" name="IsActive">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Email" class="col-form-label">ელ-ფოსტა</label>
+                        <input type="text" class="form-control" id="Email" name="Email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="FirstName" class="col-form-label">სახელი</label>
+                        <input type="text" class="form-control" id="FirstName" name="FirstName">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="LastName" class="col-form-label">გვარი</label>
+                        <input type="text" class="form-control" id="LastName" name="LastName">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">დახურვა</button>
+                        <input type="submit" class="btn btn-primary" value="შენახვა">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">მომხმარებლის წაშლა</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="User" asp-action="DeleteUser" method="get">
+                    <label>გსურთ მომხმარებლის წაშლა?</label>
+                    <input type="text" class="value" name="Id" value="" hidden />
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-danger" value="წაშლა">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">დახურვა</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/User.js"></script>

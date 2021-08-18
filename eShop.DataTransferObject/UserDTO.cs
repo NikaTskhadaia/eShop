@@ -19,4 +19,11 @@ namespace eShop.DataTransferObject
         public DateTime DateCreated { get; set; }
         public DateTime? DateChanged { get; set; }
     }
+
+    public enum UserRole
+    {
+        SuperAdmin = 1,
+        Admin = 2,
+        User = 3
+    }
 }

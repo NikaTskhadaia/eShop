@@ -1,4 +1,5 @@
-﻿using eShop.DomainModel.Aggreagates;
+﻿using eShop.DataTransferObject;
+using eShop.DomainModel.Aggreagates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,9 @@ namespace eShop.DomainService.ServiceInterfaces
         List<string> Login(UserEntity user);
         void Logout(Guid sessionId);
         bool CheckSessionIsValid(Guid SessionID);
+        IEnumerable<UserDTO> GetAll();
+        UserDTO Get(Guid id);
+        void Delete(Guid id);
+        void SaveUser(UserDTO userDto);
     }
 }

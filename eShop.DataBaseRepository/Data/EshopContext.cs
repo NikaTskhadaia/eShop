@@ -201,11 +201,6 @@ namespace eShop.DataBaseRepository.Data
             modelBuilder.Entity<ProductsInCatgory>(entity =>
             {
                 entity.ToTable("ProductsInCatgories", "Product");
-
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasDefaultValueSql("(newid())");
-
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
                 entity.Property(e => e.ProductId).HasColumnName("ProductID");
@@ -221,6 +216,8 @@ namespace eShop.DataBaseRepository.Data
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_ProductsInCatgories_Products");
+
+                entity.HasKey(pc => new { pc.ProductId, pc.CategoryId });
             });
 
             modelBuilder.Entity<Role>(entity =>

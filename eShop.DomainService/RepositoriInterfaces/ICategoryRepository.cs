@@ -10,5 +10,8 @@ namespace eShop.DomainService.RepositoriInterfaces
     public interface ICategoryRepository
     {
         IEnumerable<CategoryDTO> GetAll();
+        CategoryDTO Get(int id);
+        void SaveCategory(CategoryDTO category);
+        void Delete(int id);
     }
 }
