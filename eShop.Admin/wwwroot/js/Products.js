@@ -37,7 +37,7 @@ $('#productModal').on('show.bs.modal', function (event) {
             success: function (data) {
                 $('#ID').val(data.ID);
                 $('#Name').val(data.Name);
-                $('#Unit').val(data.Unit);
+                $('#dropdownUnitButton').html(data.Unit);
                 $('#Description').val(data.Description);
                 $('#Price').val(data.Price);
                 $('#Quantity').val(data.Quantity);
@@ -47,4 +47,10 @@ $('#productModal').on('show.bs.modal', function (event) {
             }
         });
     }
+});
+
+$('.unit-change').on('click', 'input', function () {
+    let unit = $(this).val();
+    console.log(unit);
+    $('#dropdownUnitButton').html(unit);
 });

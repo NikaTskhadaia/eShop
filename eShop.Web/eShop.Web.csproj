@@ -1,7 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>c72d10c4-6033-4101-b3a8-0215214b7e87</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eShop.Admin\eShop.Admin.csproj" />
+    <ProjectReference Include="..\eShop.ApplicationService\eShop.ApplicationService.csproj" />
+    <ProjectReference Include="..\eShop.DataBaseRepository\eShop.DataBaseRepository.csproj" />
+    <ProjectReference Include="..\eShop.DataTransferObject\eShop.DataTransferObject.csproj" />
+  </ItemGroup>
 
 </Project>

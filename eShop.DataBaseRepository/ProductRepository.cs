@@ -112,8 +112,11 @@ namespace eShop.DataBaseRepository
                 var product = (from p in context.Products
                                where p.Id == id
                                join unit in context.Units on p.UnitId equals unit.Id
+                               join image in context.ProductImages on p.Id equals image.ProductId into productWithImage
+                               from pwi in productWithImage.DefaultIfEmpty()
                                select new ProductDTO {
                                    ID = p.Id,
+                                   ImagePath = pwi.ImagePath ?? null,
                                    Name = p.Name,
                                    Description = p.Description,
                                    Price = p.Price,

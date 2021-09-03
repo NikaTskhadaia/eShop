@@ -32,8 +32,7 @@
                         <td>@item.DateCreated</td>
                         <td>@item.DateChanged</td>
                         <td>
-                            <button id="editBtn" class="btn btn-success btn-sm rounded-0" type="button" data-placement="top" data-toggle="modal" data-target="#orderDetailsModal" title="რედაქტირება" data-id="@item.ID" onclick="getOrderDetails('@item.ID')"><i class="fa fa-edit"></i></button>
-                            <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="წაშლა"><i class="fa fa-trash"></i></button>
+                            <button id="editBtn" class="btn btn-success btn-sm rounded" type="button" data-placement="top" data-toggle="modal" data-target="#orderDetailsModal" title="რედაქტირება" data-id="@item.ID" onclick="getOrderDetails('@item.ID')"><span class="iconify" data-icon="jam:align-justify"></span></button>
                         </td>
                     </tr>
                 }

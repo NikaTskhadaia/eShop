@@ -1,5 +1,13 @@
+using eShop.ApplicationService.ServiceInterfaces;
+using eShop.ApplicationService.Services;
+using eShop.DataBaseRepository;
+using eShop.DomainService.RepositoriInterfaces;
+using eShop.DomainService.RepositoryInterfaces;
+using eShop.DomainService.ServiceInterfaces;
+using eShop.DomainService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +32,19 @@ namespace eShop.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserDomainService, UserDomainService>();
+            services.AddScoped<IUserApplicationService, UserApplicationService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductDomainService, ProductDomainService>();
+            services.AddScoped<IProductApplicationService, ProductApplicationService>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryDomainService, CategoryDomainService>();
+            services.AddScoped<ICategoryApplicationService, CategoryApplicationService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderDomainService, OrderDomainService>();
+            services.AddScoped<IOrderApplicationService, OrderApplicationService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // ***REMOVED*** gets called by the runtime. Use this method to configure the HTTP request pipeline.
