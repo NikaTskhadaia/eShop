@@ -11,5 +11,6 @@ namespace eShop.DomainService.ServiceInterfaces
     {
         IEnumerable<OrderDTO> GetAll();
         IEnumerable<OrderDetailsDTO> GetOrderDetails(Guid orderId);
+        Guid SaveOrder(OrderDTO order);
     }
 }

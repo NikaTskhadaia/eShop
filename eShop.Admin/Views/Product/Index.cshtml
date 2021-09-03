@@ -48,8 +48,8 @@
                         <td>@item.Unit</td>
                         <td>@item.Quantity</td>
                         <td>
-                            <button id="editBtn" class="btn btn-success btn-sm rounded-0" type="button" data-placement="top" data-toggle="modal" data-target="#productModal" title="რედაქტირება" data-id="@item.ID" onclick="getproduct('@item.ID')"><span class="iconify" data-icon="bi:pencil"></span></button>
-                            <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-placement="top" title="წაშლა" data-id="@item.ID" data-target="#deleteProductModal"><i class="fa fa-trash"></i></button>
+                            <button id="editBtn" class="btn btn-success btn-sm rounded" type="button" data-placement="top" data-toggle="modal" data-target="#productModal" title="რედაქტირება" data-id="@item.ID" onclick="getproduct('@item.ID')"><span class="iconify" data-icon="bi:pencil"></span></button>
+                            <button class="btn btn-danger btn-sm rounded" type="button" data-toggle="modal" data-placement="top" title="წაშლა" data-id="@item.ID" data-target="#deleteProductModal"><i class="fa fa-trash"></i></button>
                         </td>
                     </tr>
                 }
@@ -88,9 +88,24 @@
                         <input type="text" class="form-control" id="Price" name="Price">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="Unit" class="col-form-label">ერთეული</label>
-                        <input type="text" class="form-control" id="Unit" name="Unit">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownUnitButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ერთეული</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-item unit-change">
+                                    <input type="radio" id="piece" name="Unit" value="ცალი">
+                                    <label for="piece" class="col-form-label">ცალი</label>
+                                </div>
+                                <div class="dropdown-item unit-change">
+                                    <input type="radio" id="meter" name="Unit" value="მეტრი">
+                                    <label for="meter" class="col-form-label">მეტრი</label>
+                                </div>
+                                <div class="dropdown-item unit-change">
+                                    <input type="radio" id="kilo" name="Unit" value="კილო">
+                                    <label for="kilo" class="col-form-label">კილო</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mb-3">
@@ -108,7 +123,7 @@
 
                     <div class="form-group">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCategoryButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 კატეგორია
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

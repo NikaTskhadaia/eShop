@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using eShop.Admin.Models;
+using eShop.ApplicationService.ServiceInterfaces;
+using eShop.DataTransferObject;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +12,52 @@ namespace eShop.Web.Controllers
 {
     public class AuthController : Controller
     {
-        public IActionResult Index()
+        private readonly IUserApplicationService _userApplicationService;
+
+        public AuthController(IUserApplicationService userApplicationService)
+        {
+            _userApplicationService = userApplicationService;
+        }
+
+        [Route("login")]
+        [HttpPost]
+        public IActionResult Login(LoginModel userModel)
+        {
+            var responseCore = _userApplicationService.Login(new LoginDTO()
+            {
+                Email = userModel.Email,
+                PasswordHash = userModel.PasswordHash
+            });
+
+            if (responseCore.Messages.Count == 0)
+            {
+                HttpContext.Session.SetString("SessionID", responseCore.SessionID.ToString());
+                HttpContext.Session.SetString("UserName", userModel.Email);
+                return Redirect("/");
+            }
+
+            return View(responseCore.Messages);
+        }
+
+        [Route("logout")]
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            Guid sessionId = Guid.Parse(HttpContext.Session.GetString("SessionID"));
+            _userApplicationService.Logout(sessionId);
+            HttpContext.Session.Remove("SessionID");
+            HttpContext.Session.Remove("UserName");
+            return Redirect("/");
+        }
+
+        public IActionResult Register()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        [Route("activate/{code}")]
+        public IActionResult Activate(string code)
         {
             return View();
         }
