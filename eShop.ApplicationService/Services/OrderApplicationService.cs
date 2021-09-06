@@ -23,9 +23,24 @@ namespace eShop.ApplicationService.Services
             return _orderDomainService.GetAll();
         }
 
+        public OrderDTO GetBasket(Guid sessionId)
+        {
+            return _orderDomainService.GetBasket(sessionId);
+        }
+
         public IEnumerable<OrderDetailsDTO> GetOrderDetails(Guid orderId)
         {
             return _orderDomainService.GetOrderDetails(orderId);
+        }
+
+        public Guid SaveOrder(OrderDTO order)
+        {
+            return  _orderDomainService.SaveOrder(order);
+        }
+
+        public void SaveOrderDetails(OrderDetailsDTO orderDetails)
+        {
+            _orderDomainService.SaveOrderDetails(orderDetails);
         }
     }
 }

@@ -45,6 +45,13 @@ namespace eShop.Web
             services.AddScoped<IOrderDomainService, OrderDomainService>();
             services.AddScoped<IOrderApplicationService, OrderApplicationService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(600);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +69,7 @@ namespace eShop.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
