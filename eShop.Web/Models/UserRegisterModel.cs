@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace eShop.Web.Models
-{`
+{
     public class UserRegisterModel
     {
         public string Email { get; set; }

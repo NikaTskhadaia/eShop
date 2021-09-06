@@ -50,16 +50,16 @@
     }
 
     function onError(error, inputElement) {  // 'this' is the form element
-        var ***REMOVED*** = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
-            replaceAttrValue = ***REMOVED***.attr("data-valmsg-replace"),
+        var container = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
+            replaceAttrValue = container.attr("data-valmsg-replace"),
             replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) !== false : null;
 
-        ***REMOVED***.removeClass("field-validation-valid").addClass("field-validation-error");
-        error.data("unobtrusiveContainer", ***REMOVED***);
+        container.removeClass("field-validation-valid").addClass("field-validation-error");
+        error.data("unobtrusiveContainer", container);
 
         if (replace) {
-            ***REMOVED***.empty();
-            error.removeClass("input-validation-error").appendTo(***REMOVED***);
+            container.empty();
+            error.removeClass("input-validation-error").appendTo(container);
         }
         else {
             error.hide();
@@ -67,12 +67,12 @@
     }
 
     function onErrors(event, validator) {  // 'this' is the form element
-        var ***REMOVED*** = $(this).find("[data-valmsg-summary=true]"),
-            list = ***REMOVED***.find("ul");
+        var container = $(this).find("[data-valmsg-summary=true]"),
+            list = container.find("ul");
 
         if (list && list.length && validator.errorList.length) {
             list.empty();
-            ***REMOVED***.addClass("validation-summary-errors").removeClass("validation-summary-valid");
+            container.addClass("validation-summary-errors").removeClass("validation-summary-valid");
 
             $.each(validator.errorList, function () {
                 $("<li />").html(this.message).appendTo(list);
@@ -81,17 +81,17 @@
     }
 
     function onSuccess(error) {  // 'this' is the form element
-        var ***REMOVED*** = error.data("unobtrusiveContainer");
+        var container = error.data("unobtrusiveContainer");
 
-        if (***REMOVED***) {
-            var replaceAttrValue = ***REMOVED***.attr("data-valmsg-replace"),
+        if (container) {
+            var replaceAttrValue = container.attr("data-valmsg-replace"),
                 replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) : null;
 
-            ***REMOVED***.addClass("field-validation-valid").removeClass("field-validation-error");
+            container.addClass("field-validation-valid").removeClass("field-validation-error");
             error.removeData("unobtrusiveContainer");
 
             if (replace) {
-                ***REMOVED***.empty();
+                container.empty();
             }
         }
     }

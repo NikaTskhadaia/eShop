@@ -28,7 +28,7 @@ namespace eShop.Web
 
         public IConfiguration Configuration { get; }
 
-        // ***REMOVED*** gets called by the runtime. Use this method to add services to the ***REMOVED***.
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -45,9 +45,16 @@ namespace eShop.Web
             services.AddScoped<IOrderDomainService, OrderDomainService>();
             services.AddScoped<IOrderApplicationService, OrderApplicationService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(600);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
-        // ***REMOVED*** gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -62,6 +69,7 @@ namespace eShop.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 

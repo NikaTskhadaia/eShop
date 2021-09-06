@@ -29,17 +29,41 @@ namespace eShop.Web.Controllers
 
         public IActionResult AddToCart(Guid id, int quantity)
         {
-            var order = new OrderDTO
+            Guid orderid;
+            Guid userId = Guid.Parse(HttpContext.Session.GetString("SessionID"));
+
+            OrderDTO basket = _orderApplicationService.GetBasket(userId);
+
+            if (basket is null)
             {
-                UserID = Guid.Parse(HttpContext.Session.GetString("SessionID")),
-                DateCreated = DateTime.Now,
-                OrderStatus = OrderStatus.Basket
+                basket = new OrderDTO
+                {
+                    UserID = userId,
+                    DateCreated = DateTime.Now,
+                    OrderStatus = OrderStatus.Basket
+                };
+                
+                orderid = _orderApplicationService.SaveOrder(basket);
+            }
+            else
+            {
+                orderid = basket.ID;
+            }
+
+            var product = _productApplicationService.Get(id);
+
+            var orderDetails = new OrderDetailsDTO 
+            {
+                OrderID = orderid,
+                ProductName = product.Name,
+                Price = product.Price,
+                Quantity = quantity,
+                DateCreated = DateTime.Now
             };
 
+            _orderApplicationService.SaveOrderDetails(orderDetails);
 
-            var orderDetails = new OrderDetailsDTO();
-
-            return null;
+            return View();
         }
     }
 }

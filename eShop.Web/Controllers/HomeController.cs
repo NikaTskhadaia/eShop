@@ -1,4 +1,5 @@
 ﻿using eShop.ApplicationService.ServiceInterfaces;
+using eShop.Web.Attributes;
 using eShop.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,6 +20,8 @@ namespace eShop.Web.Controllers
             _productApplicationService = productApplicationService;
         }
 
+        [Route("/")]
+        [Authorize]
         public IActionResult Index()
         {
             var products = _productApplicationService.GetAll().Take(8);
