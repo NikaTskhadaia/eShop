@@ -1753,7 +1753,7 @@
     var start = order ? element1 : element2;
     var end = order ? element2 : element1;
 
-    // Get common ancestor container
+    // Get common ancestor ***REMOVED***
     var range = document.createRange();
     range.setStart(start, 0);
     range.setEnd(end, 0);
@@ -3628,7 +3628,7 @@
        * @prop {number} padding=5
        * Amount of pixel used to define a minimum distance between the boundaries
        * and the popper. This makes sure the popper always has a little padding
-       * between the edges of its container
+       * between the edges of its ***REMOVED***
        */
       padding: 5,
       /**
@@ -5333,7 +5333,7 @@
     selector: '(string|boolean)',
     placement: '(string|function)',
     offset: '(number|string|function)',
-    container: '(string|element|boolean)',
+    ***REMOVED***: '(string|element|boolean)',
     fallbackPlacement: '(string|array)',
     boundary: '(string|element)',
     sanitize: 'boolean',
@@ -5357,7 +5357,7 @@
     selector: false,
     placement: 'top',
     offset: 0,
-    container: false,
+    ***REMOVED***: false,
     fallbackPlacement: 'flip',
     boundary: 'scrollParent',
     sanitize: true,
@@ -5535,12 +5535,12 @@
 
         this.addAttachmentClass(attachment);
 
-        var container = this._getContainer();
+        var ***REMOVED*** = this._getContainer();
 
         $(tip).data(this.constructor.DATA_KEY, this);
 
         if (!$.contains(this.element.ownerDocument.documentElement, this.tip)) {
-          $(tip).appendTo(container);
+          $(tip).appendTo(***REMOVED***);
         }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
@@ -5732,15 +5732,15 @@
     };
 
     _proto._getContainer = function _getContainer() {
-      if (this.config.container === false) {
+      if (this.config.***REMOVED*** === false) {
         return document.body;
       }
 
-      if (Util.isElement(this.config.container)) {
-        return $(this.config.container);
+      if (Util.isElement(this.config.***REMOVED***)) {
+        return $(this.config.***REMOVED***);
       }
 
-      return $(document).find(this.config.container);
+      return $(document).find(this.config.***REMOVED***);
     };
 
     _proto._getAttachment = function _getAttachment(placement) {
@@ -6638,10 +6638,10 @@
     } // Private
     ;
 
-    _proto._activate = function _activate(element, container, callback) {
+    _proto._activate = function _activate(element, ***REMOVED***, callback) {
       var _this2 = this;
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
+      var activeElements = ***REMOVED*** && (***REMOVED***.nodeName === 'UL' || ***REMOVED***.nodeName === 'OL') ? $(***REMOVED***).find(Selector$9.ACTIVE_UL) : $(***REMOVED***).children(Selector$9.ACTIVE);
       var active = activeElements[0];
       var isTransitioning = callback && active && $(active).hasClass(ClassName$9.FADE);
 

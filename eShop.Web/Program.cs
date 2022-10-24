@@ -11,6 +11,7 @@ namespace eShop.Web
 {
     public class Program
     {
+        // Rewrite git history
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

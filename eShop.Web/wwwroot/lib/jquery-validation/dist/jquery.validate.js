@@ -385,7 +385,7 @@ $.extend( $.validator, {
 		init: function() {
 			this.labelContainer = $( this.settings.errorLabelContainer );
 			this.errorContext = this.labelContainer.length && this.labelContainer || $( this.currentForm );
-			this.containers = $( this.settings.errorContainer ).add( this.settings.errorLabelContainer );
+			this.***REMOVED***s = $( this.settings.errorContainer ).add( this.settings.errorLabelContainer );
 			this.submitted = {};
 			this.valueCache = {};
 			this.pendingRequest = 0;
@@ -499,8 +499,8 @@ $.extend( $.validator, {
 
 				if ( !this.numberOfInvalids() ) {
 
-					// Hide error containers on last error
-					this.toHide = this.toHide.add( this.containers );
+					// Hide error ***REMOVED***s on last error
+					this.toHide = this.toHide.add( this.***REMOVED***s );
 				}
 				this.showErrors();
 
@@ -593,7 +593,7 @@ $.extend( $.validator, {
 		},
 
 		hideThese: function( errors ) {
-			errors.not( this.containers ).text( "" );
+			errors.not( this.***REMOVED***s ).text( "" );
 			this.addWrapper( errors ).hide();
 		},
 
@@ -683,7 +683,7 @@ $.extend( $.validator, {
 
 		prepareForm: function() {
 			this.reset();
-			this.toHide = this.errors().add( this.containers );
+			this.toHide = this.errors().add( this.***REMOVED***s );
 		},
 
 		prepareElement: function( element ) {
@@ -900,7 +900,7 @@ $.extend( $.validator, {
 				this.showLabel( error.element, error.message );
 			}
 			if ( this.errorList.length ) {
-				this.toShow = this.toShow.add( this.containers );
+				this.toShow = this.toShow.add( this.***REMOVED***s );
 			}
 			if ( this.settings.success ) {
 				for ( i = 0; this.successList[ i ]; i++ ) {

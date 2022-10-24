@@ -5041,7 +5041,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 				// push.apply(_, arraylike) throws on ancient WebKit
 				jQuery.merge( nodes, tmp.childNodes );
 
-				// Remember the top-level container
+				// Remember the top-level ***REMOVED***
 				tmp = fragment.firstChild;
 
 				// Ensure the created nodes are orphaned (#12392)
@@ -6457,13 +6457,13 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 			return;
 		}
 
-		container.style.cssText = "position:absolute;left:-11111px;width:60px;" +
+		***REMOVED***.style.cssText = "position:absolute;left:-11111px;width:60px;" +
 			"margin-top:1px;padding:0;border:0";
 		div.style.cssText =
 			"position:relative;display:block;box-sizing:border-box;overflow:scroll;" +
 			"margin:auto;border:1px;padding:1px;" +
 			"width:60%;top:1%";
-		documentElement.appendChild( container ).appendChild( div );
+		documentElement.appendChild( ***REMOVED*** ).appendChild( div );
 
 		var divStyle = window.getComputedStyle( div );
 		pixelPositionVal = divStyle.top !== "1%";
@@ -6487,7 +6487,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		div.style.position = "absolute";
 		scrollboxSizeVal = roundPixelMeasures( div.offsetWidth / 3 ) === 12;
 
-		documentElement.removeChild( container );
+		documentElement.removeChild( ***REMOVED*** );
 
 		// Nullify the div so it wouldn't be stored in the memory and
 		// it will also be a sign that checks already performed
@@ -6500,7 +6500,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 
 	var pixelPositionVal, boxSizingReliableVal, scrollboxSizeVal, pixelBoxStylesVal,
 		reliableTrDimensionsVal, reliableMarginLeftVal,
-		container = document.createElement( "div" ),
+		***REMOVED*** = document.createElement( "div" ),
 		div = document.createElement( "div" );
 
 	// Finish early in limited (non-browser) environments
@@ -10561,7 +10561,7 @@ jQuery.fn.extend( {
 		};
 	},
 
-	// This method will return documentElement in the following cases:
+	// ***REMOVED*** will return documentElement in the following cases:
 	// 1) For the element inside the iframe without offsetParent, this method will return
 	//    documentElement of the parent window
 	// 2) For the hidden or detached element
